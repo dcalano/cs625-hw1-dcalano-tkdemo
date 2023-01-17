@@ -1,3 +1,4 @@
+
 #! /usr/bin/env python3
 
 import sys
@@ -14,6 +15,19 @@ def newtons_method(f: Callable[[float], float],
                    df: Callable[[float], float],
                    x_n: float,
                    eps: float = EPSILON) -> Tuple[int, float]:
+    """
+    Compute an approximate solution to f(x) = 0 using Newton's Method.
+
+    Args:
+        f: mathematical function
+        df: derivative of f
+        x_n: an intitial guess (i.e., x_0)
+        eps: tolerance within which two guesses will be considered equal.
+
+    Returns:
+        A Tuple with the number of iterations and approximate solution.
+
+    """
 
     n = 0
 
